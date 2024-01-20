@@ -31,6 +31,8 @@ import demo.views.masterdetail.MasterDetailView;
 import demo.views.pageeditor.PageEditorView;
 import java.io.ByteArrayInputStream;
 import java.util.Optional;
+
+import demo.views.tictactoe.TicTacToeView;
 import org.vaadin.lineawesome.LineAwesomeIcon;
 
 /**
@@ -63,7 +65,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        H1 appName = new H1("My App");
+        H1 appName = new H1("Démonstration de Vaadin!");
         appName.addClassNames(LumoUtility.FontSize.LARGE, LumoUtility.Margin.NONE);
         Header header = new Header(appName);
 
@@ -81,6 +83,10 @@ public class MainLayout extends AppLayout {
         }
         if (accessChecker.hasAccess(AboutView.class)) {
             nav.addItem(new SideNavItem("About", AboutView.class, LineAwesomeIcon.FILE.create()));
+
+        }
+        if (accessChecker.hasAccess(TicTacToeView.class)) {
+            nav.addItem(new SideNavItem("Morpion", TicTacToeView.class, LineAwesomeIcon.CALENDAR_SOLID.create()));
 
         }
         if (accessChecker.hasAccess(FeedView.class)) {

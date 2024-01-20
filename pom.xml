@@ -39,6 +39,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.3</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -46,7 +51,7 @@
         <dependency>
             <groupId>com.vaadin</groupId>
             <!-- Replace artifactId with vaadin-core to use only free components -->
-            <artifactId>vaadin</artifactId>
+            <artifactId>vaadin-core</artifactId>
         </dependency>
         <dependency>
             <groupId>com.vaadin</groupId>
@@ -92,6 +97,26 @@
             <groupId>com.vaadin</groupId>
             <artifactId>vaadin-testbench-junit5</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-grid-pro-flow</artifactId>
+            <version>24.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-rich-text-editor-flow</artifactId>
+            <version>24.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-board-flow</artifactId>
+            <version>24.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vaadin</groupId>
+            <artifactId>vaadin-charts-flow</artifactId>
+            <version>24.3.2</version>
         </dependency>
     </dependencies>
 
