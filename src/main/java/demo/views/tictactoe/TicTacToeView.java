@@ -1,6 +1,8 @@
 package demo.views.tictactoe;
 
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -22,6 +24,17 @@ public class TicTacToeView extends VerticalLayout {
     private String currentPlayer;
 
     public TicTacToeView() {
+
+        H1 title = new H1("Bienvenue dans Vaadin Morpion");
+        title.setMinWidth("800px");
+        add(title);
+        Paragraph p1 = new Paragraph("Chacun joue à son tour, le joueur X commence. Lorsque trois pions sont alignés, la partie s'arrête.");
+        p1.setMinWidth("800px");
+        add(p1);
+        Paragraph p2 = new Paragraph("Que le meilleur gagne!");
+        p2.setMinWidth("800px");
+        add(p2);
+
         buttons = new Button[SIZE][SIZE];
         currentPlayer = PLAYER_X;
 
@@ -105,11 +118,11 @@ public class TicTacToeView extends VerticalLayout {
     }
 
     private void showWinner() {
-        Notification.show("Player " + currentPlayer + " wins!");
+        Notification.show("Le joueur " + currentPlayer + " gagne la partie!");
     }
 
     private void showDraw() {
-        Notification.show("It's a draw!");
+        Notification.show("Égalité!");
     }
 
     private void switchPlayer() {
