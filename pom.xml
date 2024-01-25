@@ -118,6 +118,11 @@
             <artifactId>vaadin-charts-flow</artifactId>
             <version>24.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.vaadin.addons.flowingcode</groupId>
+            <artifactId>year-month-calendar</artifactId>
+            <version>4.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
