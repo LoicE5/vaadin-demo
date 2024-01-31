@@ -1,6 +1,6 @@
 {
-  "name": "no-name",
-  "license": "UNLICENSED",
+  "name": "vaadin-demo",
+  "license": "Apache-2.0",
   "type": "module",
   "dependencies": {
     "@polymer/polymer": "3.5.1",
